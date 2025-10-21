@@ -1,0 +1,23 @@
+{
+  "season": "Fall",
+  "recipes": [
+    {
+      "title": "Pumpkin Spice Sourdough Loaf",
+      "image": "images/fall_pumpkin_loaf.jpg",
+      "description": "Moist and warmly spiced, this loaf captures the cozy flavors of autumn.",
+      "ingredients": ["Sourdough starter", "Pumpkin puree", "Cinnamon", "Nutmeg", "Cloves", "Flour", "Sugar"]
+    },
+    {
+      "title": "Apple Cinnamon Sourdough Rolls",
+      "image": "images/fall_apple_rolls.jpg",
+      "description": "Tender rolls swirled with cinnamon sugar and diced apples — perfect for fall mornings.",
+      "ingredients": ["Sourdough starter", "Apples", "Cinnamon", "Sugar", "Butter", "Flour"]
+    },
+    {
+      "title": "Maple Walnut Sourdough Bread",
+      "image": "images/fall_maple_walnut.jpg",
+      "description": "A hearty, nutty loaf sweetened with maple syrup — great with butter or cheese.",
+      "ingredients": ["Sourdough starter", "Flour", "Maple syrup", "Walnuts", "Salt", "Water"]
+    }
+  ]
+}
