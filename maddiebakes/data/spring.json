@@ -1,0 +1,23 @@
+{
+  "season": "Spring",
+  "recipes": [
+    {
+      "title": "Lemon Lavender Sourdough Loaf",
+      "image": "images/spring_lemon_lavender.jpg",
+      "description": "A light, fragrant loaf infused with lemon zest and dried lavender — perfect for brunch.",
+      "ingredients": ["Sourdough starter", "Bread flour", "Lemon zest", "Dried lavender", "Honey", "Water", "Salt"]
+    },
+    {
+      "title": "Herb & Garlic Sourdough Focaccia",
+      "image": "images/spring_herb_focaccia.jpg",
+      "description": "Crispy on the outside and soft inside, topped with fresh rosemary, thyme, and roasted garlic.",
+      "ingredients": ["Sourdough starter", "All-purpose flour", "Olive oil", "Garlic", "Rosemary", "Thyme", "Salt"]
+    },
+    {
+      "title": "Strawberry Sourdough Sweet Rolls",
+      "image": "images/spring_strawberry_rolls.jpg",
+      "description": "Soft, tangy sweet rolls filled with fresh strawberry compote and topped with a light glaze.",
+      "ingredients": ["Sourdough starter", "Flour", "Butter", "Sugar", "Strawberries", "Milk", "Vanilla"]
+    }
+  ]
+}
