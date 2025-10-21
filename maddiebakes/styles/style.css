@@ -98,6 +98,11 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
+.recipe-card a {
+  text-decoration: none;
+  color: #09070a;
+}
+
 .signup-banner {
   background-color: #f7dada;
   text-align: center;

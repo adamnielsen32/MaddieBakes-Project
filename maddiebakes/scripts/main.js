@@ -2,21 +2,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const recipes = [
     {
       title: "Spring Sourdough Recipes",
+      url: "spring-recipies.html",
       image: "images/spring.jpg",
       description: "Fresh and floral flavors like herbs, lemons, and strawberries."
     },
     {
       title: "Summer Sourdough Recipes",
+      url: "summer-recipies.html",
       image: "images/summer.jpg",
       description: "Bright, picnic-ready bakes like sourdough buns and grilled flatbreads."
     },
     {
       title: "Fall Sourdough Recipes",
+      url: "fall-recipies.html",
       image: "images/fall.jpg",
       description: "Warm, hearty loaves with pumpkin, cinnamon, and apples."
     },
     {
       title: "Winter Sourdough Recipes",
+      url: "fall-recipies.html",
       image: "images/winter.jpg",
       description: "Comforting holiday bakes like chocolate loaves and sourdough stuffing."
     }
@@ -37,9 +41,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const card = document.createElement("div");
       card.className = "recipe-card";
       card.innerHTML = `
+      <a href="${recipe.url}">
         <img src="${recipe.image}" alt="${recipe.title}">
         <h3>${recipe.title}</h3>
         <p>${recipe.description}</p>
+      </a>
       `;
       recipeContainer.appendChild(card);
     });
