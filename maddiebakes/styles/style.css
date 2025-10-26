@@ -27,11 +27,33 @@ header {
   border-bottom: 2px solid #f7dada;
 }
 
+/* Cart button style *Was not able to get position correct* */
+#navbar-container .cart-icon {
+  position: relative;
+}
+
+.cart-icon {
+  cursor: pointer;
+}
+
+.cart-icon span{
+  font-family: 'Unna', serif;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: #f7dada;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 330px;
+}
+
 main {
   max-width: 960px;   
   margin: 0 auto;     
-  padding: 1rem; 
-       
+  padding: 1rem;    
 }
 
 
@@ -79,6 +101,7 @@ nav a:hover {
   grid-template-columns: 1fr;
   gap: 2rem;
   padding: 1rem 0;
+  transition: transform .5s;
 }
 
 .recipe-card {
@@ -88,6 +111,7 @@ nav a:hover {
   text-align: center;
   padding: 1rem;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
 }
 
 .recipe-card img {
@@ -101,6 +125,16 @@ nav a:hover {
 .recipe-card a {
   text-decoration: none;
   color: #09070a;
+}
+
+.recipe-card button {
+  background-color: #863aa0;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
 }
 
 .signup-banner {
@@ -180,6 +214,85 @@ nav a:hover {
   display: none;
 }
 
+/* Cart Tab */
+
+.cartTab {
+  width: 400px;
+  background-color: #353432;
+  color: #eee;
+  position: fixed;
+  inset: 0 -400px 0 auto;
+  display: grid;
+  grid-template-columns: 70px 1fr 70px;
+  transition: .5s;
+}
+
+body.showCart .cartTab {
+  inset: 0 0 0 auto;
+}
+
+body.showCart #recipeContainer {
+  transform: translateX(-250px);
+}
+
+.cartTab h1 {
+  padding: 20px;
+  margin: 0;
+  font-weight: 300;
+  color: #eee;
+}
+
+.cartTab .btn {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.cartTab .btn button {
+  background-color: #863aa0;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.cartTab .btn .close {
+  background-color:#eee;
+}
+
+.cartTab .listCart .item img {
+  width: 100%;
+}
+
+.cartTab .listCart .item {
+  display: grid;
+  grid-template-columns: 70px 150px 50px 1fr;
+  gap: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.listCart .quantity span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  justify-items: center;
+  background-color: #eee;
+  color: #555;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.listCart .quantiy span:nth-child(2) {
+  background-color: transparent;
+  color: #eee;
+}
+
+.listCart .item span:nth-child(even) {
+  background-color: #eee1;
+}
+
+.listCart {
+  overflow: auto;
+}
 
 @media (max-width: 600px) {
   nav {

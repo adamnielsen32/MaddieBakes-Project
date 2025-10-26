@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${season.image}" alt="${season.title}">
         <h3>${season.title}</h3>
         <p>${season.description}</p>
+        <button class="addCart">
+          Add to Cart
+        </button>
       `;
       card.addEventListener("click", () => loadSeasonRecipes(season.season));
       recipeContainer.appendChild(card);
@@ -63,6 +66,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${recipe.title}</h3>
         <p>${recipe.description}</p>
       </a>
+      <button class="addCart">
+        Add to Cart
+      </button>
       `;
       recipeContainer.appendChild(card);
     });
