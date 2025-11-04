@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       title: "Winter Sourdough Recipes",
-      url: "fall-recipies.html",
+      url: "winter-recipies.html",
       image: "images/winter.jpg",
       season: "winter",
       description: "Comforting holiday bakes like chocolate loaves and sourdough stuffing."
@@ -34,7 +34,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("searchInput");
   const backButton = document.getElementById("backButton"); // optional back button
 
-  // Display the season cards (homepage view)
+  // Ensure the initial state is clean
+  if (!window.location.search) {
+    history.replaceState({}, "", "index.html");
+  }
+
+  // --- Handle initial page load based on URL ---
+  function handleInitialLoad() {
+    const params = new URLSearchParams(window.location.search);
+    const season = params.get("season");
+    if (season) {
+      loadSeasonRecipes(season);
+    } else {
+      displaySeasons();
+    }
+  }
+
+  // --- Display the main season cards ---
   function displaySeasons() {
     recipeContainer.innerHTML = "";
     seasons.forEach(season => {
@@ -44,16 +60,29 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${season.image}" alt="${season.title}">
         <h3>${season.title}</h3>
         <p>${season.description}</p>
-        <button class="addCart">
-          Add to Cart
-        </button>
+        <button class="addCart">Add to Cart</button>
       `;
-      card.addEventListener("click", () => loadSeasonRecipes(season.season));
+
+      // ✅ Only push a new history entry if we're switching to a new season
+      card.addEventListener("click", () => {
+        const currentParams = new URLSearchParams(window.location.search);
+        const currentSeason = currentParams.get("season");
+
+        if (currentSeason !== season.season) {
+          history.pushState({ season: season.season }, "", `?season=${season.season}`);
+        }
+
+        loadSeasonRecipes(season.season);
+      });
+
       recipeContainer.appendChild(card);
     });
+
+    // Hide the back button when showing main grid
+    if (backButton) backButton.style.display = "none";
   }
 
-  // Display recipes for a selected season
+  // --- Display recipes for a selected season ---
   function displayRecipes(recipes) {
     recipeContainer.innerHTML = "";
 
@@ -66,18 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${recipe.title}</h3>
         <p>${recipe.description}</p>
       </a>
-      <button class="addCart">
-        Add to Cart
-      </button>
+      <button class="addCart">Add to Cart</button>
       `;
       recipeContainer.appendChild(card);
     });
 
-    // Add a back button to return to the main seasons view
     if (backButton) backButton.style.display = "block";
   }
 
-  // Fetch and display seasonal recipes
+  // --- Load and display seasonal recipes from JSON ---
   function loadSeasonRecipes(season) {
     fetch(`data/${season}.json`)
       .then(response => {
@@ -93,19 +119,31 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   }
 
-  // Back button functionality
+  // --- Handle browser back/forward buttons ---
+  window.addEventListener("popstate", () => {
+    const params = new URLSearchParams(window.location.search);
+    const season = params.get("season");
+
+    if (season) {
+      loadSeasonRecipes(season);
+    } else {
+      displaySeasons();
+      if (backButton) backButton.style.display = "none";
+    }
+  });
+
+  // --- Optional back button (on-screen) ---
   if (backButton) {
     backButton.addEventListener("click", () => {
-      backButton.style.display = "none";
+      history.pushState({}, "", "index.html");
       displaySeasons();
+      backButton.style.display = "none";
     });
   }
 
-  // Search functionality (optional)
+  // --- Search functionality ---
   searchInput.addEventListener("input", () => {
     const searchTerm = searchInput.value.toLowerCase();
-
-    // Search through visible cards
     const cards = document.querySelectorAll(".recipe-card");
     cards.forEach(card => {
       const text = card.textContent.toLowerCase();
@@ -113,6 +151,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Show the main page (seasons) on load
-  displaySeasons();
+  // --- Initialize page view ---
+  handleInitialLoad();
 });
