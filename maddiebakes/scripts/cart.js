@@ -87,9 +87,13 @@ function renderCartItems() {
         const div = document.createElement("div");
         div.classList.add("item");
 
+        const cartTab = document.querySelector(".cartTab");
+        cartTab.setAttribute("aria-hidden", false);
+        cartTab.setAttribute("aria-label", "Cart tab open");
+
         div.innerHTML = `
             <div class="image">
-                <img src="${item.image}">
+                <img src="${item.image} alt="${item.title}">
             </div>
 
             <div class="name">${item.title}</div>

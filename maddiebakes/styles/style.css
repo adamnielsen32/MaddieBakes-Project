@@ -48,12 +48,12 @@ header {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  right: -20px;
+  right: 73px;
 }
 
 @media (min-width: 600px) {
   .cart-icon span {
-
+    right: -20px;
   }
 }
 

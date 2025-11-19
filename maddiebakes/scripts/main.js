@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     seasons.forEach(season => {
       const card = document.createElement("div");
       card.className = "recipe-card season-card";
+      // card.setAttribute("aria-label", recipe.attribute);
       card.innerHTML = `
         <img src="${season.image}" alt="${season.title}">
         <h3>${season.title}</h3>

@@ -4,7 +4,7 @@
       "season": "Fall",
       "recipes": [
         {
-          "id": "01",
+          "attribute": "Fall Recipes",
           "title": "Pumpkin Spice Sourdough Loaf",
           "image": "images/fall_pumpkin_loaf.jpg",
           "description": "Moist and warmly spiced, this loaf captures the cozy flavors of autumn.",
@@ -12,7 +12,7 @@
           "price": "$20"
         },
         {
-          "id": "02",
+          "attribute": "Fall Recipes",
           "title": "Apple Cinnamon Sourdough Rolls",
           "image": "images/fall_apple_rolls.jpg",
           "description": "Tender rolls swirled with cinnamon sugar and diced apples — perfect for fall mornings.",
@@ -20,7 +20,7 @@
           "price": "$20"
         },
         {
-          "id": "03",
+          "attribute": "Fall Recipes",
           "title": "Maple Walnut Sourdough Bread",
           "image": "images/fall_maple_walnut.jpg",
           "description": "A hearty, nutty loaf sweetened with maple syrup — great with butter or cheese.",
@@ -33,7 +33,7 @@
       "season": "Spring",
       "recipes": [
         {
-          "id": "04",
+          "attribute": "Spring Recipes",
           "title": "Lemon Lavender Sourdough Loaf",
           "image": "images/spring_lemon_lavender.jpg",
           "description": "A light, fragrant loaf infused with lemon zest and dried lavender — perfect for brunch.",
@@ -41,7 +41,7 @@
           "price": "$20"
         },
         {
-          "id": "05",
+          "attribute": "Spring Recipes",
           "title": "Herb & Garlic Sourdough Focaccia",
           "image": "images/spring_herb_focaccia.jpg",
           "description": "Crispy on the outside and soft inside, topped with fresh rosemary, thyme, and roasted garlic.",
@@ -49,7 +49,7 @@
           "price": "$20"
         },
         {
-          "id": "06",
+          "attribute": "Spring Recipes",
           "title": "Strawberry Sourdough Sweet Rolls",
           "image": "images/spring_strawberry_rolls.jpg",
           "description": "Soft, tangy sweet rolls filled with fresh strawberry compote and topped with a light glaze.",
@@ -62,7 +62,7 @@
       "season": "Summer",
       "recipes": [
         {
-          "id": "07",
+          "attribute": "Summer Recipes",
           "title": "Grilled Sourdough Flatbread",
           "image": "images/summer_flatbread.jpg",
           "description": "Easy-to-make flatbreads cooked on the grill, perfect for summer BBQs and picnics.",
@@ -70,7 +70,7 @@
           "price": "$20"
         },
         {
-          "id": "08",
+          "attribute": "Summer Recipes",
           "title": "Sourdough Burger Buns",
           "image": "images/summer_buns.jpg",
           "description": "Soft and fluffy burger buns that hold up beautifully to juicy summer burgers.",
@@ -78,7 +78,7 @@
           "price": "$20"
         },
         {
-          "id": "09",
+          "attribute": "Summer Recipes",
           "title": "Peach & Basil Sourdough Galette",
           "image": "images/summer_galette.jpg",
           "description": "A rustic sourdough pastry filled with ripe peaches and fragrant basil — a true taste of summer.",
@@ -91,7 +91,7 @@
       "season": "Winter",
       "recipes": [
         {
-          "id": "10",
+          "attribute": "Winter Recipes",
           "title": "Chocolate Cranberry Sourdough",
           "image": "images/winter_chocolate_cranberry.jpg",
           "description": "Rich and festive, with dark chocolate chunks and tart cranberries.",
@@ -99,7 +99,7 @@
           "price": "$20"
         },
         {
-          "id": "11",
+          "attribute": "Winter Recipes",
           "title": "Sourdough Stuffing Loaf",
           "image": "images/winter_stuffing.jpg",
           "description": "Savory loaf flavored with herbs and onions — perfect for holiday dinners.",
@@ -107,7 +107,7 @@
           "price": "$20"
         },
         {
-          "id": "12",
+          "attribute": "Winter Recipes",
           "title": "Cinnamon Hot Cocoa Sourdough Rolls",
           "image": "images/winter_cocoa_rolls.jpg",
           "description": "Sweet sourdough rolls swirled with cocoa and cinnamon, topped with marshmallow glaze.",
