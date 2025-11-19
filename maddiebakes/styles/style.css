@@ -27,13 +27,14 @@ header {
   border-bottom: 2px solid #f7dada;
 }
 
-/* Cart button style *Was not able to get position correct* */
 #navbar-container .cart-icon {
   position: relative;
 }
 
 .cart-icon {
+  display: flex;
   cursor: pointer;
+  justify-content: center;
 }
 
 .cart-icon span{
@@ -47,7 +48,13 @@ header {
   border-radius: 50%;
   position: absolute;
   top: 50%;
-  right: 330px;
+  right: -20px;
+}
+
+@media (min-width: 600px) {
+  .cart-icon span {
+
+  }
 }
 
 main {
@@ -264,6 +271,10 @@ body.showCart #recipeContainer {
   background-color:#eee;
 }
 
+.cartTab .btn .checkOut {
+  color: white;
+}
+
 .cartTab .listCart .item img {
   width: 100%;
 }
@@ -281,19 +292,15 @@ body.showCart #recipeContainer {
   width: 25px;
   height: 25px;
   justify-items: center;
-  background-color: #eee;
-  color: #555;
+  background-color: #863aa0;
+  color: #eee;
   border-radius: 50%;
   cursor: pointer;
 }
 
-.listCart .quantiy span:nth-child(2) {
-  background-color: transparent;
-  color: #eee;
-}
-
 .listCart .item span:nth-child(even) {
-  background-color: #eee1;
+  background-color: #eee;
+  color: black;
 }
 
 .listCart {

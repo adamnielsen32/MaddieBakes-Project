@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const seasons = [
-    {
+    { 
       title: "Spring Sourdough Recipes",
       url: "spring-recipies.html",
       image: "images/spring.jpg",
@@ -60,7 +60,6 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${season.image}" alt="${season.title}">
         <h3>${season.title}</h3>
         <p>${season.description}</p>
-        <button class="addCart">Add to Cart</button>
       `;
 
       // ✅ Only push a new history entry if we're switching to a new season
