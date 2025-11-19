@@ -140,15 +140,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // --- Search functionality ---
-  searchInput.addEventListener("input", () => {
-    const searchTerm = searchInput.value.toLowerCase();
-    const cards = document.querySelectorAll(".recipe-card");
-    cards.forEach(card => {
-      const text = card.textContent.toLowerCase();
-      card.style.display = text.includes(searchTerm) ? "" : "none";
-    });
-  });
+  // --- Dropdown Menu Selection ---
+  const seasonSelect = document.getElementById("seasonSelect");
+
+seasonSelect.addEventListener("change", () => {
+  const chosenSeason = seasonSelect.value;
+
+  if (chosenSeason) {
+    // Update the URL
+    history.pushState({ season: chosenSeason }, "", `?season=${chosenSeason}`);
+
+    // Load the recipes
+    loadSeasonRecipes(chosenSeason);
+  }
+});
+
 
   // --- Initialize page view ---
   handleInitialLoad();
