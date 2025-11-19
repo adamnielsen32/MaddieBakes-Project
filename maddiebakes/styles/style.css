@@ -227,6 +227,26 @@ nav a:hover {
   display: none;
 }
 
+/* Dropdown menu styles */
+.search-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#seasonSelect {
+  width: 90%;           
+  max-width: 600px;     
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 2px solid #c8a57a;
+  border-radius: 8px;
+  background: white;
+  font-family: "Unna", serif;
+}
+
+
 /* Cart Tab */
 
 .cartTab {
