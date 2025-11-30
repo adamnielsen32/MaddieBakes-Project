@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const recipeContainer = document.getElementById("recipeContainer");
   const searchInput = document.getElementById("searchInput");
   const backButton = document.getElementById("backButton"); 
+  const status = document.getElementById("status");
 
   // Ensure the initial state is clean
   if (!window.location.search) {
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Display the main season cards ---
   function displaySeasons() {
     recipeContainer.innerHTML = "";
+    if (status) status.textContent = "Showing all seasons.";
     seasons.forEach(season => {
       const card = document.createElement("div");
       card.className = "recipe-card season-card";
@@ -102,6 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     if (backButton) backButton.style.display = "block";
+    if (status) status.textContent = `${recipes.length} recipes displayed.`;
+    if (recipeContainer) recipeContainer.focus();
   }
 
   // --- Load and display seasonal recipes from JSON ---
@@ -113,6 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then(data => {
         displayRecipes(data.recipes);
+        if (status) status.textContent = `Loaded ${data.recipes.length} recipes for ${season}.`;
+        if (recipeContainer) recipeContainer.focus();
       })
       .catch(error => {
         console.error(error);

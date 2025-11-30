@@ -103,7 +103,7 @@ function renderCartItems() {
 
         div.innerHTML = `
             <div class="image">
-                <img src="${item.image} alt="${item.title}">
+                <img src="${item.image}" alt="${item.title}">
             </div>
 
             <div class="name">${item.title}</div>

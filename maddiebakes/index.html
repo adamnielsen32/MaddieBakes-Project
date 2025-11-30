@@ -43,17 +43,20 @@
     <h2>Search through my favorite seasonal recipes below:</h2>
     
     <section class="search-bar">
-      <select id="seasonSelect">
+      <label for="seasonSelect" class="sr-only">Select a season</label>
+      <select id="seasonSelect" aria-describedby="seasonHelp">
         <option value="">Select a season!</option>
         <option value="spring">Spring Recipes</option>
         <option value="summer">Summer Recipes</option>
         <option value="fall">Fall Recipes</option>
         <option value="winter">Winter Recipes</option>
       </select>
+      <div id="seasonHelp" class="sr-only">Choose a season to load seasonal recipes. Selection updates the page content.</div>
     </section>
 
-    <section class="recipes-grid" id="recipeContainer">
-      
+    <div id="status" aria-live="polite" class="sr-only" aria-atomic="true"></div>
+
+    <section class="recipes-grid" id="recipeContainer" tabindex="-1">
     </section>
 
     <!-- Cart Tab -->
@@ -62,7 +65,7 @@
       <div class="listCart">
         <div class="item">
           <div class="image">
-          <img src="images/summer.jpg">
+          <img src="images/summer.jpg" alt="Sample product image">
           </div>
           <div class="name">
             NAME
