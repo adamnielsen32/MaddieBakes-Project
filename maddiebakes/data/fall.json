@@ -3,21 +3,24 @@
   "recipes": [
     {
       "title": "Pumpkin Spice Sourdough Loaf",
-      "image": "images/fall_pumpkin_loaf.jpg",
+      "image": "images/fall_pumpkin_loaf.png",
       "description": "Moist and warmly spiced, this loaf captures the cozy flavors of autumn.",
-      "ingredients": ["Sourdough starter", "Pumpkin puree", "Cinnamon", "Nutmeg", "Cloves", "Flour", "Sugar"]
+      "ingredients": ["Sourdough starter", "Pumpkin puree", "Cinnamon", "Nutmeg", "Cloves", "Flour", "Sugar"],
+      "price": "$20.00"
     },
     {
       "title": "Apple Cinnamon Sourdough Rolls",
-      "image": "images/fall_apple_rolls.jpg",
+      "image": "images/fall_apple_rolls.png",
       "description": "Tender rolls swirled with cinnamon sugar and diced apples — perfect for fall mornings.",
-      "ingredients": ["Sourdough starter", "Apples", "Cinnamon", "Sugar", "Butter", "Flour"]
+      "ingredients": ["Sourdough starter", "Apples", "Cinnamon", "Sugar", "Butter", "Flour"],
+      "price": "$20.00"
     },
     {
       "title": "Maple Walnut Sourdough Bread",
-      "image": "images/fall_maple_walnut.jpg",
+      "image": "images/fall_maple_walnut.png",
       "description": "A hearty, nutty loaf sweetened with maple syrup — great with butter or cheese.",
-      "ingredients": ["Sourdough starter", "Flour", "Maple syrup", "Walnuts", "Salt", "Water"]
+      "ingredients": ["Sourdough starter", "Flour", "Maple syrup", "Walnuts", "Salt", "Water"],
+      "price": "$20.00"
     }
   ]
 }

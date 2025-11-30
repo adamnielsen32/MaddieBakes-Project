@@ -12,8 +12,18 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
+function updateCartIcon() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCount = document.querySelector(".cart-icon span");
+
+  if (cartCount) {
+    cartCount.textContent = cart.length;
+  }
+}
+
 function init() {
     renderCartItems();
+    updateCartCount();
 }
 
 // Listen globally for Add to Cart clicks from main.js cards

@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const recipeContainer = document.getElementById("recipeContainer");
   const searchInput = document.getElementById("searchInput");
-  const backButton = document.getElementById("backButton"); // optional back button
+  const backButton = document.getElementById("backButton"); 
 
   // Ensure the initial state is clean
   if (!window.location.search) {
@@ -94,6 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <img src="${recipe.image}" alt="${recipe.title}">
         <h3>${recipe.title}</h3>
         <p>${recipe.description}</p>
+        <h3>${recipe.price}</h3>
       </a>
       <button class="addCart">Add to Cart</button>
       `;
@@ -153,10 +154,42 @@ seasonSelect.addEventListener("change", () => {
 
     // Load the recipes
     loadSeasonRecipes(chosenSeason);
+  } else {
+    // First option selected → go to home page
+    window.location.href = "index.html";
   }
 });
 
-
   // --- Initialize page view ---
   handleInitialLoad();
+});
+
+
+const form = document.getElementById("signupForm");
+const emailInput = document.getElementById("emailInput");
+const errorMessage = document.getElementById("errorMessage");
+const modal = document.getElementById("emailModal");
+const closeBtn = document.getElementById("closeModal");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = emailInput.value.trim();
+
+  // Email regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    errorMessage.textContent = "Please enter a valid email address.";
+    return;
+  }
+
+  // If valid: clear error, open modal, reset form
+  errorMessage.textContent = "";
+  modal.style.display = "flex";
+  form.reset();
+});
+
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
 });

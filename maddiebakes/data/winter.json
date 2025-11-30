@@ -3,21 +3,24 @@
   "recipes": [
     {
       "title": "Chocolate Cranberry Sourdough",
-      "image": "images/winter_chocolate_cranberry.jpg",
+      "image": "images/winter_chocolate_cranberry.png",
       "description": "Rich and festive, with dark chocolate chunks and tart cranberries.",
-      "ingredients": ["Sourdough starter", "Bread flour", "Cocoa powder", "Cranberries", "Chocolate", "Salt"]
+      "ingredients": ["Sourdough starter", "Bread flour", "Cocoa powder", "Cranberries", "Chocolate", "Salt"],
+      "price": "$20.00"
     },
     {
       "title": "Sourdough Stuffing Loaf",
-      "image": "images/winter_stuffing.jpg",
+      "image": "images/winter_stuffing.png",
       "description": "Savory loaf flavored with herbs and onions — perfect for holiday dinners.",
-      "ingredients": ["Sourdough starter", "Flour", "Sage", "Thyme", "Onions", "Butter", "Salt"]
+      "ingredients": ["Sourdough starter", "Flour", "Sage", "Thyme", "Onions", "Butter", "Salt"],
+      "price": "$20.00"
     },
     {
       "title": "Cinnamon Hot Cocoa Sourdough Rolls",
-      "image": "images/winter_cocoa_rolls.jpg",
+      "image": "images/winter_cocoa_rolls.png",
       "description": "Sweet sourdough rolls swirled with cocoa and cinnamon, topped with marshmallow glaze.",
-      "ingredients": ["Sourdough starter", "Flour", "Cocoa powder", "Cinnamon", "Sugar", "Butter"]
+      "ingredients": ["Sourdough starter", "Flour", "Cocoa powder", "Cinnamon", "Sugar", "Butter"],
+      "price": "$20.00"
     }
   ]
 }
