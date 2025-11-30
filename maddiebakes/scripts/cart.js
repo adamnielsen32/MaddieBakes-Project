@@ -35,7 +35,14 @@ document.addEventListener('click', (event) => {
             title: card.querySelector("h3").innerText,
             description: card.querySelector("p").innerText,
             image: card.querySelector("img").src,
-            url: card.querySelector("a").href,
+            // read url only if an anchor exists or a data-url attribute is present
+            url: (function(){
+                const a = card.querySelector("a");
+                if (a && a.getAttribute('href')) return a.getAttribute('href');
+                const content = card.querySelector('.recipe-content');
+                if (content && content.dataset && content.dataset.url) return content.dataset.url || '';
+                return '';
+            })(),
             qty: 1
         };
        

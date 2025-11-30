@@ -91,14 +91,15 @@ document.addEventListener("DOMContentLoaded", () => {
     recipes.forEach(recipe => {
       const card = document.createElement("div");
       card.className = "recipe-card";
+      // Render recipe card without a clickable link — clicking should not navigate.
       card.innerHTML = `
-      <a href="${recipe.url}">
-        <img src="${recipe.image}" alt="${recipe.title}">
-        <h3>${recipe.title}</h3>
-        <p>${recipe.description}</p>
-        <h3>${recipe.price}</h3>
-      </a>
-      <button class="addCart">Add to Cart</button>
+        <div class="recipe-content" data-url="${recipe.url || ''}">
+          <img src="${recipe.image}" alt="${recipe.title}">
+          <h3>${recipe.title}</h3>
+          <p>${recipe.description}</p>
+          <h3>${recipe.price}</h3>
+        </div>
+        <button class="addCart">Add to Cart</button>
       `;
       recipeContainer.appendChild(card);
     });
