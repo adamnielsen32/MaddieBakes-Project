@@ -12,7 +12,7 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
-function init() {
+function init() { 
     renderCartItems();
 }
 
@@ -59,6 +59,7 @@ listCartItems.addEventListener('click', (event) => {
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
+    localStorage.setItem("cartCounter", JSON.stringify(cartCount))
 }
 
 function updateCartCount() {
