@@ -3,21 +3,24 @@
   "recipes": [
     {
       "title": "Lemon Lavender Sourdough Loaf",
-      "image": "images/spring_lemon_lavender.jpg",
+      "image": "images/spring_lemon_lavender.png",
       "description": "A light, fragrant loaf infused with lemon zest and dried lavender — perfect for brunch.",
-      "ingredients": ["Sourdough starter", "Bread flour", "Lemon zest", "Dried lavender", "Honey", "Water", "Salt"]
+      "ingredients": ["Sourdough starter", "Bread flour", "Lemon zest", "Dried lavender", "Honey", "Water", "Salt"],
+      "price": "$20.00"
     },
     {
       "title": "Herb & Garlic Sourdough Focaccia",
-      "image": "images/spring_herb_focaccia.jpg",
+      "image": "images/spring_herb_focaccia.png",
       "description": "Crispy on the outside and soft inside, topped with fresh rosemary, thyme, and roasted garlic.",
-      "ingredients": ["Sourdough starter", "All-purpose flour", "Olive oil", "Garlic", "Rosemary", "Thyme", "Salt"]
+      "ingredients": ["Sourdough starter", "All-purpose flour", "Olive oil", "Garlic", "Rosemary", "Thyme", "Salt"],
+      "price": "$20.00"
     },
     {
       "title": "Strawberry Sourdough Sweet Rolls",
-      "image": "images/spring_strawberry_rolls.jpg",
+      "image": "images/spring_strawberry_rolls.png",
       "description": "Soft, tangy sweet rolls filled with fresh strawberry compote and topped with a light glaze.",
-      "ingredients": ["Sourdough starter", "Flour", "Butter", "Sugar", "Strawberries", "Milk", "Vanilla"]
+      "ingredients": ["Sourdough starter", "Flour", "Butter", "Sugar", "Strawberries", "Milk", "Vanilla"],
+      "price": "$20.00"
     }
   ]
 }

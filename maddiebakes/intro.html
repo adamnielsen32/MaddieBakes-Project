@@ -6,20 +6,38 @@
   <title>Intro to Sourdough | Maddie Bakes</title>
   <link rel="stylesheet" href="styles/style.css" />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Unna&display=swap" rel="stylesheet">
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/cart.js" defer></script>
 
 </head>
 <body>
   <header>
-    <img src="images/Bigger_Maddie_Cakes_and_Bakes_nb.avif" alt="Maddie Bakes Logo" class="logo">
-    <nav>
-      <a href="index.html">Seasonal Sourdough Recipes</a>
-      <a href="intro.html">Intro to Sourdough</a>
-    </nav>
+    <a href="index.html">
+      <img src="images/Bigger_Maddie_Cakes_and_Bakes_nb.avif" alt="Maddie Bakes Logo" class="logo">
+    </a>
+    <div id="navbar-container">
+      <div class="empty"></div>
+
+      <nav>
+        <a href="index.html">Seasonal Sourdough Recipes</a>
+        <a href="intro.html">Intro to Sourdough</a>
+
+        <!-- Cart Button -->
+      <div class="cart-icon">
+        <svg  aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+        </svg>
+        <span>0</span>
+      </div>
+      
+    </div>
+      </nav>
+   
   </header>
 
   <main>
     <section class="signup-banner">
-      <p>Sign up for free Sourdough learning material!</p>
+      <h1>Sign up for free Sourdough learning material!</h1>
     </section>
 
     <section class="intro-grid">
@@ -35,13 +53,49 @@
 
     <section class="signup-form">
       <h2>Sign up form</h2>
-      <form>
-        <input type="text" placeholder="Username" required>
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Password" required>
+      <form id="signupForm">
+        <input type="email" id="emailInput" placeholder="Email" required>
         <button type="submit">Sign up</button>
+        <p id="errorMessage" class="error-message"></p>
       </form>
     </section>
+
+    <div id="emailModal" class="modal">
+      <div class="modal-content">
+        <h2>Welcome to Maddie Bakes!</h2>
+        <h3>Thank you for signing up!  </h3>
+        <p>
+        Check your inbox for your free sourdough learning material!</p>
+        <button id="closeModal" class="close-btn">Close</button>
+      </div>
+    </div>
+ <!-- Cart Tab -->
+    <div class="cartTab" aria-hidden="true">
+      <h1>Shopping Cart</h1>
+      <div class="listCart">
+        <div class="item">
+          <div class="image">
+          <img src="images/summer.jpg" alt="Sample product image">
+          </div>
+          <div class="name">
+            NAME
+          </div>
+          <div class="totalPrice">
+            $200
+          </div>
+          <div class="quantity">
+            <span class="minus">-</span>
+            <span>1</span>
+            <span class="plus">+</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="btn">
+        <button class="close">CLOSE</button>
+        <button class="checkOut">CHECK OUT</button>
+      </div>
+    </div>
   </main>
 </body>
 </html>

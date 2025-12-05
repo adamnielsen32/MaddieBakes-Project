@@ -6,7 +6,7 @@
         {
           "attribute": "Fall Recipes",
           "title": "Pumpkin Spice Sourdough Loaf",
-          "image": "images/fall_pumpkin_loaf.jpg",
+          "image": "images/fall_pumpkin_loaf.png",
           "description": "Moist and warmly spiced, this loaf captures the cozy flavors of autumn.",
           "ingredients": ["Sourdough starter", "Pumpkin puree", "Cinnamon", "Nutmeg", "Cloves", "Flour", "Sugar"],
           "price": "$20"
@@ -14,7 +14,7 @@
         {
           "attribute": "Fall Recipes",
           "title": "Apple Cinnamon Sourdough Rolls",
-          "image": "images/fall_apple_rolls.jpg",
+          "image": "images/fall_apple_rolls.png",
           "description": "Tender rolls swirled with cinnamon sugar and diced apples — perfect for fall mornings.",
           "ingredients": ["Sourdough starter", "Apples", "Cinnamon", "Sugar", "Butter", "Flour"],
           "price": "$20"
@@ -22,7 +22,7 @@
         {
           "attribute": "Fall Recipes",
           "title": "Maple Walnut Sourdough Bread",
-          "image": "images/fall_maple_walnut.jpg",
+          "image": "images/fall_maple_walnut.png",
           "description": "A hearty, nutty loaf sweetened with maple syrup — great with butter or cheese.",
           "ingredients": ["Sourdough starter", "Flour", "Maple syrup", "Walnuts", "Salt", "Water"],
           "price": "$20"
@@ -35,7 +35,7 @@
         {
           "attribute": "Spring Recipes",
           "title": "Lemon Lavender Sourdough Loaf",
-          "image": "images/spring_lemon_lavender.jpg",
+          "image": "images/spring_lemon_lavender.png",
           "description": "A light, fragrant loaf infused with lemon zest and dried lavender — perfect for brunch.",
           "ingredients": ["Sourdough starter", "Bread flour", "Lemon zest", "Dried lavender", "Honey", "Water", "Salt"],
           "price": "$20"
@@ -43,7 +43,7 @@
         {
           "attribute": "Spring Recipes",
           "title": "Herb & Garlic Sourdough Focaccia",
-          "image": "images/spring_herb_focaccia.jpg",
+          "image": "images/spring_herb_focaccia.png",
           "description": "Crispy on the outside and soft inside, topped with fresh rosemary, thyme, and roasted garlic.",
           "ingredients": ["Sourdough starter", "All-purpose flour", "Olive oil", "Garlic", "Rosemary", "Thyme", "Salt"],
           "price": "$20"
@@ -51,7 +51,7 @@
         {
           "attribute": "Spring Recipes",
           "title": "Strawberry Sourdough Sweet Rolls",
-          "image": "images/spring_strawberry_rolls.jpg",
+          "image": "images/spring_strawberry_rolls.png",
           "description": "Soft, tangy sweet rolls filled with fresh strawberry compote and topped with a light glaze.",
           "ingredients": ["Sourdough starter", "Flour", "Butter", "Sugar", "Strawberries", "Milk", "Vanilla"],
           "price": "$20"
@@ -64,7 +64,7 @@
         {
           "attribute": "Summer Recipes",
           "title": "Grilled Sourdough Flatbread",
-          "image": "images/summer_flatbread.jpg",
+          "image": "images/summer_flatbread.png",
           "description": "Easy-to-make flatbreads cooked on the grill, perfect for summer BBQs and picnics.",
           "ingredients": ["Sourdough starter", "Whole wheat flour", "Olive oil", "Salt", "Water"],
           "price": "$20"
@@ -72,7 +72,7 @@
         {
           "attribute": "Summer Recipes",
           "title": "Sourdough Burger Buns",
-          "image": "images/summer_buns.jpg",
+          "image": "images/summer_buns.png",
           "description": "Soft and fluffy burger buns that hold up beautifully to juicy summer burgers.",
           "ingredients": ["Sourdough starter", "Bread flour", "Eggs", "Butter", "Sugar", "Salt"],
           "price": "$20"
@@ -80,7 +80,7 @@
         {
           "attribute": "Summer Recipes",
           "title": "Peach & Basil Sourdough Galette",
-          "image": "images/summer_galette.jpg",
+          "image": "images/summer_galette.png",
           "description": "A rustic sourdough pastry filled with ripe peaches and fragrant basil — a true taste of summer.",
           "ingredients": ["Sourdough discard", "Flour", "Butter", "Peaches", "Basil", "Sugar"],
           "price": "$20"
@@ -93,7 +93,7 @@
         {
           "attribute": "Winter Recipes",
           "title": "Chocolate Cranberry Sourdough",
-          "image": "images/winter_chocolate_cranberry.jpg",
+          "image": "images/winter_chocolate_cranberry.png",
           "description": "Rich and festive, with dark chocolate chunks and tart cranberries.",
           "ingredients": ["Sourdough starter", "Bread flour", "Cocoa powder", "Cranberries", "Chocolate", "Salt"],
           "price": "$20"
@@ -101,7 +101,7 @@
         {
           "attribute": "Winter Recipes",
           "title": "Sourdough Stuffing Loaf",
-          "image": "images/winter_stuffing.jpg",
+          "image": "images/winter_stuffing.png",
           "description": "Savory loaf flavored with herbs and onions — perfect for holiday dinners.",
           "ingredients": ["Sourdough starter", "Flour", "Sage", "Thyme", "Onions", "Butter", "Salt"],
           "price": "$20"
@@ -109,7 +109,7 @@
         {
           "attribute": "Winter Recipes",
           "title": "Cinnamon Hot Cocoa Sourdough Rolls",
-          "image": "images/winter_cocoa_rolls.jpg",
+          "image": "images/winter_cocoa_rolls.png",
           "description": "Sweet sourdough rolls swirled with cocoa and cinnamon, topped with marshmallow glaze.",
           "ingredients": ["Sourdough starter", "Flour", "Cocoa powder", "Cinnamon", "Sugar", "Butter"],
           "price": "$20"

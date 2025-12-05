@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const recipeContainer = document.getElementById("recipeContainer");
   const searchInput = document.getElementById("searchInput");
-  const backButton = document.getElementById("backButton"); // optional back button
+  const backButton = document.getElementById("backButton"); 
+  const status = document.getElementById("status");
 
   // Ensure the initial state is clean
   if (!window.location.search) {
@@ -53,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Display the main season cards ---
   function displaySeasons() {
     recipeContainer.innerHTML = "";
+    if (status) status.textContent = "Showing all seasons.";
     seasons.forEach(season => {
       const card = document.createElement("div");
       card.className = "recipe-card season-card";
@@ -89,18 +91,22 @@ document.addEventListener("DOMContentLoaded", () => {
     recipes.forEach(recipe => {
       const card = document.createElement("div");
       card.className = "recipe-card";
+      // Render recipe card without a clickable link — clicking should not navigate.
       card.innerHTML = `
-      <a href="${recipe.url}">
-        <img src="${recipe.image}" alt="${recipe.title}">
-        <h3>${recipe.title}</h3>
-        <p>${recipe.description}</p>
-      </a>
-      <button class="addCart">Add to Cart</button>
+        <div class="recipe-content" data-url="${recipe.url || ''}">
+          <img src="${recipe.image}" alt="${recipe.title}">
+          <h3>${recipe.title}</h3>
+          <p>${recipe.description}</p>
+          <h3>${recipe.price}</h3>
+        </div>
+        <button class="addCart">Add to Cart</button>
       `;
       recipeContainer.appendChild(card);
     });
 
     if (backButton) backButton.style.display = "block";
+    if (status) status.textContent = `${recipes.length} recipes displayed.`;
+    if (recipeContainer) recipeContainer.focus();
   }
 
   // --- Load and display seasonal recipes from JSON ---
@@ -112,6 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then(data => {
         displayRecipes(data.recipes);
+        if (status) status.textContent = `Loaded ${data.recipes.length} recipes for ${season}.`;
+        if (recipeContainer) recipeContainer.focus();
       })
       .catch(error => {
         console.error(error);
@@ -153,10 +161,42 @@ seasonSelect.addEventListener("change", () => {
 
     // Load the recipes
     loadSeasonRecipes(chosenSeason);
+  } else {
+    // First option selected → go to home page
+    window.location.href = "index.html";
   }
 });
 
-
   // --- Initialize page view ---
   handleInitialLoad();
+});
+
+
+const form = document.getElementById("signupForm");
+const emailInput = document.getElementById("emailInput");
+const errorMessage = document.getElementById("errorMessage");
+const modal = document.getElementById("emailModal");
+const closeBtn = document.getElementById("closeModal");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = emailInput.value.trim();
+
+  // Email regex
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!emailRegex.test(email)) {
+    errorMessage.textContent = "Please enter a valid email address.";
+    return;
+  }
+
+  // If valid: clear error, open modal, reset form
+  errorMessage.textContent = "";
+  modal.style.display = "flex";
+  form.reset();
+});
+
+closeBtn.addEventListener("click", function () {
+  modal.style.display = "none";
 });

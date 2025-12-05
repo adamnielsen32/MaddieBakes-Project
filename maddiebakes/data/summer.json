@@ -3,21 +3,24 @@
   "recipes": [
     {
       "title": "Grilled Sourdough Flatbread",
-      "image": "images/summer_flatbread.jpg",
+      "image": "images/summer_flatbread.png",
       "description": "Easy-to-make flatbreads cooked on the grill, perfect for summer BBQs and picnics.",
-      "ingredients": ["Sourdough starter", "Whole wheat flour", "Olive oil", "Salt", "Water"]
+      "ingredients": ["Sourdough starter", "Whole wheat flour", "Olive oil", "Salt", "Water"],
+      "price": "$20.00"
     },
     {
       "title": "Sourdough Burger Buns",
-      "image": "images/summer_buns.jpg",
+      "image": "images/summer_buns.png",
       "description": "Soft and fluffy burger buns that hold up beautifully to juicy summer burgers.",
-      "ingredients": ["Sourdough starter", "Bread flour", "Eggs", "Butter", "Sugar", "Salt"]
+      "ingredients": ["Sourdough starter", "Bread flour", "Eggs", "Butter", "Sugar", "Salt"],
+      "price": "$20.00"
     },
     {
       "title": "Peach & Basil Sourdough Galette",
-      "image": "images/summer_galette.jpg",
+      "image": "images/summer_galette.png",
       "description": "A rustic sourdough pastry filled with ripe peaches and fragrant basil — a true taste of summer.",
-      "ingredients": ["Sourdough discard", "Flour", "Butter", "Peaches", "Basil", "Sugar"]
+      "ingredients": ["Sourdough discard", "Flour", "Butter", "Peaches", "Basil", "Sugar"],
+      "price": "$20.00"
     }
   ]
 }

@@ -12,8 +12,18 @@ closeCart.addEventListener('click', () => {
     body.classList.toggle('showCart');
 });
 
+function updateCartIcon() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const cartCount = document.querySelector(".cart-icon span");
+
+  if (cartCount) {
+    cartCount.textContent = cart.length;
+  }
+}
+
 function init() { 
     renderCartItems();
+    updateCartCount();
 }
 
 // Listen globally for Add to Cart clicks from main.js cards
@@ -25,7 +35,14 @@ document.addEventListener('click', (event) => {
             title: card.querySelector("h3").innerText,
             description: card.querySelector("p").innerText,
             image: card.querySelector("img").src,
-            url: card.querySelector("a").href,
+            // read url only if an anchor exists or a data-url attribute is present
+            url: (function(){
+                const a = card.querySelector("a");
+                if (a && a.getAttribute('href')) return a.getAttribute('href');
+                const content = card.querySelector('.recipe-content');
+                if (content && content.dataset && content.dataset.url) return content.dataset.url || '';
+                return '';
+            })(),
             qty: 1
         };
        
@@ -94,7 +111,7 @@ function renderCartItems() {
 
         div.innerHTML = `
             <div class="image">
-                <img src="${item.image} alt="${item.title}">
+                <img src="${item.image}" alt="${item.title}">
             </div>
 
             <div class="name">${item.title}</div>
