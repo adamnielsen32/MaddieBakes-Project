@@ -50,6 +50,7 @@ const backButton = document.getElementById("backButton"); // optional back butto
         <img src="${recipe.image}" alt="${recipe.title}">
         <h3>${recipe.title}</h3>
         <p>${recipe.description}</p>
+        <p class="price">${recipe.price}</p>
       </a>
       <button class="addCart">Add to Cart</button>
       `;
