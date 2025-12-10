@@ -24,6 +24,7 @@ function updateCartIcon() {
 function init() { 
     renderCartItems();
     updateCartCount();
+    updateSubtotal();
 }
 
 // Listen globally for Add to Cart clicks from main.js cards
@@ -58,6 +59,7 @@ listCartItems.addEventListener('click', (event) => {
         cart[i].qty++;
         saveCart();
         renderCartItems();
+        updateSubtotal();
     }
 
     if (event.target.classList.contains("minus")) {
@@ -71,6 +73,7 @@ listCartItems.addEventListener('click', (event) => {
 
         saveCart();
         renderCartItems();
+        updateSubtotal();
     }
 })
 
@@ -85,6 +88,32 @@ function updateCartCount() {
     cartCount.innerText = total;
 }
 
+function updateSubtotal() {
+    const subtotalEl = document.querySelector(".subtotal-value");
+    if (!subtotalEl) return;
+
+    let subtotal = 0;
+    cart.forEach(item => {
+        subtotal += item.price * item.qty;
+    });
+
+    subtotalEl.textContent = `$${subtotal.toFixed(2)}`;
+}
+
+// animate the add to cart button
+document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".addCart");
+    if (!btn) return;
+
+        btn.textContent = "✓ Added";
+        btn.classList.add("added");
+
+        setTimeout(() => {
+            btn.textContent = "Add to Cart";
+            btn.classList.remove("added");
+        }, 1200);
+});
+
 function addToCart(item) {
     let exisiting = cart.find(cartItem => cartItem.title === item.title);
 
@@ -96,6 +125,7 @@ function addToCart(item) {
 
     saveCart();
     renderCartItems();
+    updateSubtotal();
 }
 
 function renderCartItems() {
