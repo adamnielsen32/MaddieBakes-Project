@@ -319,10 +319,6 @@ body.showCart #recipeContainer {
   height: 80px;
 }
 
-.footer-btns button {
-  /* padding: 20px 0; */
-}
-
 .cartTab .cart-footer button {
   background-color: #863aa0;
   border: none;
