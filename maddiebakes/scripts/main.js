@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p>${season.description}</p>
       `;
 
-      // ✅ Only push a new history entry if we're switching to a new season
+      
       card.addEventListener("click", () => {
         const currentParams = new URLSearchParams(window.location.search);
         const currentSeason = currentParams.get("season");
@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
     recipes.forEach(recipe => {
       const card = document.createElement("div");
       card.className = "recipe-card";
-      // Render recipe card without a clickable link — clicking should not navigate.
+      
       card.innerHTML = `
-        <div class="recipe-content" data-url="${recipe.url || ''}">
+        <div class="recipe-content">
           <img src="${recipe.image}" alt="${recipe.title}">
           <h3>${recipe.title}</h3>
           <p>${recipe.description}</p>
@@ -173,6 +173,8 @@ seasonSelect.addEventListener("change", () => {
 
 
 const form = document.getElementById("signupForm");
+const firstNameInput = document.getElementById("firstName");
+const lastNameInput = document.getElementById("lastName");
 const emailInput = document.getElementById("emailInput");
 const errorMessage = document.getElementById("errorMessage");
 const modal = document.getElementById("emailModal");
@@ -181,17 +183,25 @@ const closeBtn = document.getElementById("closeModal");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
+  const first = firstNameInput.value.trim();
+  const last = lastNameInput.value.trim();
   const email = emailInput.value.trim();
 
   // Email regex
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // Validation: ensure all fields are filled
+  if (first === "" || last === "" || email === "") {
+    errorMessage.textContent = "Please fill out all fields.";
+    return;
+  }
 
   if (!emailRegex.test(email)) {
     errorMessage.textContent = "Please enter a valid email address.";
     return;
   }
 
-  // If valid: clear error, open modal, reset form
+  // If valid
   errorMessage.textContent = "";
   modal.style.display = "flex";
   form.reset();
@@ -200,3 +210,4 @@ form.addEventListener("submit", function (e) {
 closeBtn.addEventListener("click", function () {
   modal.style.display = "none";
 });
+
