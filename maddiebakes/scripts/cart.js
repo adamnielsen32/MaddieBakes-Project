@@ -21,7 +21,7 @@ function updateCartIcon() {
   }
 }
 
-function init() {
+function init() { 
     renderCartItems();
     updateCartCount();
 }
@@ -30,21 +30,22 @@ function init() {
 document.addEventListener('click', (event) => {
     if (event.target.classList.contains('addCart')) {
         const card = event.target.closest('.recipe-card');
+
+        const priceEl = card.querySelector(".price");
+        const price = priceEl ? priceEl.innerText : "$0.00";
+        const params = new URLSearchParams(window.location.search);
+        const season = params.get('season') || "unknown";
         
         const item = {
             title: card.querySelector("h3").innerText,
             description: card.querySelector("p").innerText,
             image: card.querySelector("img").src,
-            // read url only if an anchor exists or a data-url attribute is present
-            url: (function(){
-                const a = card.querySelector("a");
-                if (a && a.getAttribute('href')) return a.getAttribute('href');
-                const content = card.querySelector('.recipe-content');
-                if (content && content.dataset && content.dataset.url) return content.dataset.url || '';
-                return '';
-            })(),
+            price: parseFloat(price.replace("$","")),
+            season: season,
             qty: 1
         };
+
+        console.log("Price FOund: " + price);
        
         addToCart(item);
     }
@@ -76,6 +77,7 @@ listCartItems.addEventListener('click', (event) => {
 function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
     updateCartCount();
+    localStorage.setItem("cartCounter", JSON.stringify(cartCount))
 }
 
 function updateCartCount() {
@@ -88,7 +90,6 @@ function addToCart(item) {
 
     if (exisiting) {
         exisiting.qty++;
-        inCart++;
     } else {
         cart.push(item);
     }
@@ -115,7 +116,7 @@ function renderCartItems() {
 
             <div class="name">${item.title}</div>
 
-            <div class="totalPrice">$${item.price || 0}</div>
+            <div class="totalPrice">$${(item.price * item.qty).toFixed(2)}</div>
 
             <div class="quantity">
                 <span class="minus" data-index="${index}">-</span>
