@@ -161,11 +161,7 @@ nav a:hover {
   border-radius: 20px;
   margin-top: 10px;
   border: none;
-  cursor: pointer;
-}
-
-.recipe-card .recipe-content {
-  pointer-events: none;  
+  cursor: default;
 }
 
 .recipe-card .addCart {
