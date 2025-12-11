@@ -161,16 +161,8 @@ nav a:hover {
   border-radius: 20px;
   margin-top: 10px;
   border: none;
-}
-
-.recipe-content {
-  cursor: default;
-}
-
-.recipe-card .addCart {  
   cursor: pointer;
 }
-
 
 .signup-banner {
   background-color: #f7dada;

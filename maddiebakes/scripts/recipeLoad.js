@@ -46,7 +46,6 @@ const backButton = document.getElementById("backButton"); // optional back butto
       const card = document.createElement("div");
       card.className = "recipe-card";
       card.innerHTML = `
-      <a href="${recipe.url}">
         <img src="${recipe.image}" alt="${recipe.title}">
         <h3>${recipe.title}</h3>
         <p>${recipe.description}</p>
